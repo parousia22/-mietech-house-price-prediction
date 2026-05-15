@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Timezones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕐 Digital Clock Timezone</h1>
+            <p>Real-time clock across multiple time zones</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="format-toggle">
+                    <input type="checkbox" id="format-toggle" checked>
+                    <span>24-Hour Format</span>
+                </label>
+            </div>
+            <div class="control-group">
+                <label for="timezone-select">Add Timezone:</label>
+                <select id="timezone-select">
+                    <option value="">Select a timezone...</option>
+                    <option value="America/New_York">New York (EST)</option>
+                    <option value="America/Chicago">Chicago (CST)</option>
+                    <option value="America/Denver">Denver (MST)</option>
+                    <option value="America/Los_Angeles">Los Angeles (PST)</option>
+                    <option value="Europe/London">London (GMT)</option>
+                    <option value="Europe/Paris">Paris (CET)</option>
+                    <option value="Europe/Berlin">Berlin (CET)</option>
+                    <option value="Asia/Tokyo">Tokyo (JST)</option>
+                    <option value="Asia/Shanghai">Shanghai (CST)</option>
+                    <option value="Asia/Hong_Kong">Hong Kong (HKT)</option>
+                    <option value="Asia/Dubai">Dubai (GST)</option>
+                    <option value="Asia/Kolkata">India (IST)</option>
+                    <option value="Australia/Sydney">Sydney (AEDT)</option>
+                    <option value="Pacific/Auckland">Auckland (NZDT)</option>
+                    <option value="UTC">UTC (Coordinated Universal Time)</option>
+                </select>
+                <button id="add-btn">+ Add</button>
+            </div>
+        </div>
+
+        <div class="clocks-container" id="clocks-container">
+            <!-- Clocks will be added here dynamically -->
+        </div>
+
+        <div class="info-panel">
+            <h3>ℹ️ Information</h3>
+            <p><strong>Total Clocks:</strong> <span id="clock-count">0</span></p>
+            <p><strong>Current Format:</strong> <span id="format-display">24-Hour</span></p>
+            <button id="clear-btn" class="danger-btn">Clear All Clocks</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
